@@ -11,7 +11,7 @@ class Storage {
     }
 
     addItem(newItem) {
-        return this.#items.push(newItem);
+         this.#items.push(newItem);
     }
 
     removeItem(itemToRemove) {
@@ -20,11 +20,10 @@ class Storage {
 
 }
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-console.log(storage);
+
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 storage.addItem("Droid");
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 storage.removeItem("Prolonger");
-console.log(storage.removeItem());
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
